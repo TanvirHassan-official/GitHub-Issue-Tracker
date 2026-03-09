@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Home | Github Issue Tracker</title>
+
+    <!-- daisyUI  -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <!-- font - geist -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Geist:wght@100..900&display=swap" rel="stylesheet">
+
+    <!-- icons  -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <style>
+        * {
+            font-family: "Geist", sans-serif;    
+        }
+    </style>
+</head>
+
+<body class="px-20 py-2 bg-[#F8FAFC] ">
+
+    <section class="navbar bg-base-100 shadow-sm">
+      <div class="flex-1 flex items-center gap-2">
+        <img src="./assets/github-logo.png" class="w-9 h-9">
+        <h1 class="font-semibold text-2xl">GitHub Issues Tracker</h1>
+      </div>
+      <div class="flex gap-2">
+        <input type="text" placeholder="Search" class="input input-bordered w-24 md:w-auto" />
+        <a class="btn btn-ghost text-lg bg-[#4A00FF] text-white"><i class="fa-solid fa-plus"></i> New Issue</a>
+      </div>
+    </section>
+
+    <section class="my-15 grid space-y-4 ">
+        <div role="tablist" class="tabs tabs-box ">
+                <a role="tab" class="tab tab-active bg-[#4A00FF] text-white  w-30 h-10" onclick="">All</a>
+                <a role="tab" class="tab  w-30 h-10" onclick="">Open</a>
+                <a role="tab" class="tab  w-30 h-10" onclick="">Closed</a>
+            </div>
+
+            <div id="issue-container" class="">
+                <div id="issue-dashboard">
+                    <div>
+                        <img src="./assets/Aperture.png" alt="">
+                    </div>
+                </div>
+
+                <div id="issue-cards">
+
+                </div>
+            </div>
+    </section>
+</body>
+
+
+</html>
