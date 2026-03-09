@@ -6,9 +6,10 @@ async function fetchIssues(){
     const issues = data.data;
 
     displayIssues(issues);
+    countUpdate();
     document.getElementById("all-tab").addEventListener("click", () => {
     displayIssues(issues);
-
+    countUpdate();
     document.getElementById("all-tab").classList.add('tab-active', 'bg-[#4A00FF]', 'text-white');
     document.getElementById("open-tab").classList.remove('tab-active', 'bg-[#4A00FF]', 'text-white');
     document.getElementById("closed-tab").classList.remove('tab-active', 'bg-[#4A00FF]', 'text-white');
@@ -21,7 +22,7 @@ document.getElementById("open-tab").addEventListener("click", () => {
 
 
     displayIssues(openIssues);
-    
+    countUpdate();
     document.getElementById("all-tab").classList.remove('tab-active', 'bg-[#4A00FF]', 'text-white');
     document.getElementById("open-tab").classList.add('tab-active', 'bg-[#4A00FF]', 'text-white');
     document.getElementById("closed-tab").classList.remove('tab-active', 'bg-[#4A00FF]', 'text-white');
@@ -32,6 +33,7 @@ document.getElementById("closed-tab").addEventListener("click", () => {
     const closedIssues = issues.filter(issue => issue.status === "closed")
 
     displayIssues(closedIssues);
+    countUpdate();
     document.getElementById("all-tab").classList.remove('tab-active', 'bg-[#4A00FF]', 'text-white');
     document.getElementById("open-tab").classList.remove('tab-active', 'bg-[#4A00FF]', 'text-white');
     document.getElementById("closed-tab").classList.add('tab-active', 'bg-[#4A00FF]', 'text-white');
@@ -140,5 +142,17 @@ async function openIssueModal(id){
     document.getElementById("my_modal_5").showModal();
 }
 
-fetchIssues()
+const dashTotal = document.getElementById('total');
+
+function countUpdate(){
+
+    const totalCard = document.querySelectorAll('#issue-cards .card').length;
+
+    dashTotal.innerText = totalCard;
+
+}
+fetchIssues();  
+
+
+
 

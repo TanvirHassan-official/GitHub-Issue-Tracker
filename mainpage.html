@@ -47,10 +47,19 @@
 
             <div id="issue-container" class="">
                 <div id="issue-dashboard">
-                    <div>
-                        <img src="./assets/Aperture.png" alt="">
+                    <div class="flex">
+                        <img src="./assets/Aperture.png" >
+                        
+                            <div class="grid">
+                                <h2 class="font-bold">Total</h2>
+                                <p id="total">8</p>
+                    
+                            </div>
+                        
                     </div>
                 </div>
+
+
 
                 <div id="issue-cards" class="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
 
@@ -64,7 +73,7 @@
     <h3 id="modal-title" class="text-lg font-bold"></h3>
 
     <div class="flex items-center">
-        <p id="modal-status" class="badge text-green-600 text-gray-500"></p>
+        <p id="modal-status" class="badge text-green-600"></p>
         <p id="modal-author" class="text-gray-500"></p>
         <p id="modal-date" class="text-gray-500"></p>
     </div>
@@ -75,7 +84,7 @@
 
     <p id="modal-assignee" class="text-gray-500"></p>
 
-    <p id="modal-priority" class="text-gray-500 badge text-red-500"></p>
+    <p id="modal-priority" class="badge text-red-500"></p>
     
 
     <div class="modal-action">
