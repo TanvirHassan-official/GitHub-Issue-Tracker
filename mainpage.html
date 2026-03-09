@@ -25,24 +25,24 @@
     </style>
 </head>
 
-<body class="px-20 py-2 bg-[#F8FAFC] ">
+<body class="px-5 md:px-20 py-2 bg-[#F8FAFC] ">
 
-    <section class="navbar bg-base-100 shadow-sm">
+    <section class="navbar bg-base-100 shadow-sm grid justify-center space-y-2 md:flex">
       <div class="flex-1 flex items-center gap-2">
-        <img src="./assets/github-logo.png" class="w-9 h-9">
-        <h1 class="font-semibold text-2xl">GitHub Issues Tracker</h1>
+        <img src="./assets/github-logo.png" class="w-6 h-6 lg:w-9 lg:h-9">
+        <h1 class="font-semibold text-lg lg:text-2xl">GitHub Issues Tracker</h1>
       </div>
       <div class="flex gap-2">
         <input type="text" placeholder="Search" class="input input-bordered w-24 md:w-auto" />
-        <a class="btn btn-ghost text-lg bg-[#4A00FF] text-white"><i class="fa-solid fa-plus"></i> New Issue</a>
+        <a class="btn btn-ghost text-sm bg-[#4A00FF] text-white"><i class="fa-solid fa-plus"></i> New Issue</a>
       </div>
     </section>
 
     <section class="my-15 grid space-y-4 ">
         <div role="tablist" class="tabs tabs-box ">
-                <a role="tab" class="tab tab-active bg-[#4A00FF] text-white  w-30 h-10" onclick="">All</a>
-                <a role="tab" class="tab  w-30 h-10" onclick="">Open</a>
-                <a role="tab" class="tab  w-30 h-10" onclick="">Closed</a>
+                <a id="all-tab" role="tab" class="tab tab-active bg-[#4A00FF] text-white w-15 md:w-30 h-10">All</a>
+                <a id="open-tab" role="tab" class="tab  w-15 md:w-30 h-10">Open</a>
+                <a id="closed-tab" role="tab" class="tab  w-15 md:w-30 h-10">Closed</a>
             </div>
 
             <div id="issue-container" class="">
@@ -52,11 +52,12 @@
                     </div>
                 </div>
 
-                <div id="issue-cards">
+                <div id="issue-cards" class="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
 
                 </div>
             </div>
     </section>
+    <script src="./script/tracker.js"></script>
 </body>
 
 
