@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Github Issue Tracker</title>
+    <title>Login | Github Issue Tracker</title>
 
     <!-- daisyUI  -->
     <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
@@ -25,8 +25,61 @@
     </style>
 </head>
 
-<body>
+<body class="py-20 px-auto bg-[#F8FAFC]">
+    <section id="login-card" class="flex justify-center">
+        <div class="card w-96 bg-base-100 shadow-sm">
+            <div class="card-body">
+                <div class="grid justify-items-center gap-6">
+                    <img src="./assets/github-logo.png" class="w-25 h-25">
+                    <div class="grid justify-items-center gap-1">
+                        <h2 class="font-semibold text-2xl">GitHub Issues Tracker</h2>
+                        <p class="text-[#64748B] opacity-100">Sign in to manage your issues</p>
+                    </div>
+                </div>
+            
+                <div class="space-y-4">
+                    <div class="grid space-y-2">
+                        <label class="text[#1F2937] text-base font-medium" for="Username">Username</label>
+                        <input id="userName" class="p-4 rounded-lg border-[#E4E4E7] outline-[#E4E4E7] " name="Username" placeholder="Enter Username" type="text">
+                        <p class="text-[#4A00FF] text-[14px]">Default: admin</p>
+                    </div>
 
+                    <div class="grid space-y-2">
+                        <label class="text[#1F2937] text-base font-medium" for="">Password</label>
+                        <input id="userPassword" class="p-4 rounded-lg border-[#E4E4E7] outline-[#E4E4E7] " placeholder="Enter Password" type="password">
+                        <p class="text-[#4A00FF] text-[14px]">Default: admin123</p>
+                    </div>
+                </div>
+
+
+                <div class="mt-6">
+                    <button id="login" class="bg-[#4A00FF] text-white w-full p-4 rounded-lg cursor-pointer active:scale-98">Sign In</button>
+                </div>
+
+                <div class=" flex justify-center items-center text-center h-4">
+                    <hr class="w-[45%] text-[#E4E4E7]">
+                    <p class="text-[#1F2937]">OR</p>
+                    <hr class="w-[45%] text-[#E4E4E7]">
+                </div>
+
+                <div class=" grid justify-items-center gap-4 pt-4">
+                    <p class="text-[#64748B] text-[14px]">Demo Credentials:</p>
+                    <div class=" grid justify-items-center gap-1">
+                        <h3 class="text-base">
+                            <span class=" font-semibold  text-[#1F2937]">Username:</span>
+                            admin
+                        </h3>
+                        <h3 class="text-base">
+                            <span class=" font-semibold  text-[#1F2937]">Password:</span>
+                            admin123
+                        </h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </section>
 
 </body>
 
