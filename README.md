@@ -1,6 +1,6 @@
 # 🐛 GitHub Issue Tracker
 
-![GitHub Issue Tracker Banner](./assests/issueTracker.jpg)
+![GitHub Issue Tracker Banner](./assets/issueTracker.jpg)
 
 [Click here for live link](https://tanvirhassan-official.github.io/GitHub-Issue-Tracker/)
 
